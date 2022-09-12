@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <ItemListContainer name="maceta"/>
-      <ItemListContainer name="cenicero"/>
-      <ItemListContainer name="sahumerio"/>
+      <ItemListContainer/>
       <Footer/>
     </>  
   );

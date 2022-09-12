@@ -1,3 +1,4 @@
+
 import { FiShoppingCart} from "react-icons/fi";
 
 const CartWidget = ()=>{

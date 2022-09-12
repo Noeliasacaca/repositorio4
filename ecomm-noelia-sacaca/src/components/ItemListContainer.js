@@ -1,14 +1,18 @@
-import React from 'react';
+import ItemCount from './ItemCount';
 
-const ItemListContainer= (props)=>{
-    
-        return (
-            <>
-            <div>
-                <p>Producto:{props.name}</p>
-            </div>
-            </>
-        );
+const adding = (rate)=>{
+    if(rate > 0 ){
+        alert(` ${rate} productos se agregaron a tu carrito `)
+    }
 }
-
+const ItemListContainer= ()=>{
+        return(
+            <main>
+                <ItemCount 
+                cantidad="10" 
+                initial ="1" 
+                onAdd={adding}/>
+            </main>
+        )
+}
 export default ItemListContainer;
