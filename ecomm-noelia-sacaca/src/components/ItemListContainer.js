@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ItemCount from '../components/ItemCount';
-import customFetch from '../utils/Data';
+import Data from '../utils/Data';
 import ItemList from '../containers/ItemList'
 
 const adding = (rate)=>{
@@ -11,7 +11,7 @@ const adding = (rate)=>{
 const ItemListContainer= ()=>{
     const [data,setData]=useState([]);
     useEffect(()=>{
-        customFetch()
+        Data()
         .then(result=> setData(result))
         .catch(err=> console.log(err))
     }, [])
