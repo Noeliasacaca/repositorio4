@@ -61,11 +61,11 @@ const data = [
         "img":"https://i.ibb.co/GFzJrwn/teteradegatito.jpg"
     },
 ]
-const okay = true;
+const producto = true;
 const FetchData=()=>{
     return new Promise((result,reject)=>{
         setTimeout(()=>{
-            if(okay){
+            if(producto){
                 result(data)
             }
             else{
