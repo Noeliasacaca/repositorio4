@@ -5,12 +5,12 @@ const ItemCount = ({cantidad,initial, onAdd})=>{
     const [rate,setRate]= useState(parseInt(initial));
     const agregando2 = ()=> {
         if(rate<cantidad){
-            setRate(rate+1);
+            rate<cantidad && setRate(rate +1);
         }
     }
     const agregando3 = ()=> {
         if(rate > 0 ){
-            setRate(rate-1);
+            rate>initial && setRate(rate -1);
         }
     }
     return(
