@@ -11,23 +11,18 @@ const adding = (rate)=>{
 }
 const ItemListContainer= ({greeting})=>{
     const [data,setData]=useState([]);
-    const {categoriaId} = useParams();
-    useEffect(()=>{
-        const getData = new Promise(resolve => {
-            setTimeout(() => {
-                resolve (Data)
-            },2000)
-        });
-        if (categoriaId){
-            getData.then(res => setData(res.filter(function () {
-                return Data.category === categoriaId;
-            })))
-        } else{
-            getData.then(res => setData (res));
-        }
-    }, [categoriaId])
-
-
+        const {id} = useParams();
+        useEffect(()=>{ 
+            if(id){
+                Data()
+                    .then(result=> setData(result.filter(item=> item.category == id)))
+                    .catch(err=> console.log(err))
+            }else{ 
+                Data()
+                    .then(result=> setData(result))
+                    .catch(err=> console.log(err))
+            }
+        }, [id])
     return(
         <main>
             <div><h2>{greeting}</h2></div>

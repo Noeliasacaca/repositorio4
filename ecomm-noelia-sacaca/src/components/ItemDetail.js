@@ -1,4 +1,4 @@
-import {FiTag} from "react-icons/fi";
+import {FiTag, CgShutterstock, FiShoppingBag} from "react-icons/fi";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item})=>{
@@ -9,9 +9,11 @@ const ItemDetail = ({item})=>{
             </div>
             <div>
                 <h2><strong>{item.title}</strong></h2>
-                <p>{item.descripcion}</p>
+                
                 <div>
                     <FiTag/> <strong>${item.price}</strong>
+                    <CgShutterstock/> <p>{item.description}</p>
+                    <FiShoppingBag/> <strong>{item.stock}</strong>
                 </div>
                 <ItemCount 
                 cantidad = {item.cantidad}

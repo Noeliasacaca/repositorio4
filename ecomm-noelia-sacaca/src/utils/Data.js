@@ -1,4 +1,4 @@
-const Data = [
+const data = [
     {
     
         "id":1,
@@ -91,4 +91,18 @@ const Data = [
         category:"tetera"
     },
 ]
+
+const okay = true;
+const Data=()=>{
+    return new Promise((result,reject)=>{
+        setTimeout(()=>{
+            if(okay){
+                result(data)
+            }
+            else{
+                reject()
+            }
+        }, 2000)
+    })
+}
 export default Data;
