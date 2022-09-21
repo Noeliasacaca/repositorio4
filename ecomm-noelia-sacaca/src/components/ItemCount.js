@@ -2,8 +2,8 @@ import {FiPlus, FiMinus} from "react-icons/fi";
 import { useState } from "react";
 import {Link} from 'react-router-dom';
 
-const ItemCount = ({cantidad,initial, onAdd})=>{
-    const [rate,setRate]= useState(parseInt(initial));
+const ItemCount = ({cantidad,inicial, onAdd})=>{
+    const [rate,setRate]= useState(parseInt(inicial));
     const agregando2 = ()=> {
         if(rate<cantidad){
             rate<cantidad && setRate(rate +1);
@@ -11,7 +11,7 @@ const ItemCount = ({cantidad,initial, onAdd})=>{
     }
     const agregando3 = ()=> {
         if(rate > 0 ){
-            rate>initial && setRate(rate -1);
+            rate>inicial && setRate(rate -1);
         }
     }
     return(
@@ -22,7 +22,7 @@ const ItemCount = ({cantidad,initial, onAdd})=>{
                 <Link onClick={()=>{agregando2()}}><FiPlus/></Link>
             </div>
             <div >
-                <button type="button" onClick={()=>{onAdd(rate)}}>agregar al carrito</button>
+                <button type="button" disabled={rate==0 && true}  onClick={()=>{onAdd(rate)}}>agregar al carrito</button>
             </div>
         </div>
     );

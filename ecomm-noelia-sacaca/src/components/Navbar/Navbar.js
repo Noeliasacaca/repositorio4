@@ -28,7 +28,7 @@ function Navbar() {
                             </ul>
                         </li>
 						<li class="item">
-						<NavLink className='icon nav-link animate__animated animate__bounceInLeft socialItem' to='/'><CartWidget /></NavLink>
+						<NavLink  className='icon nav-link animate__animated animate__bounceInLeft socialItem' to='/cart'><CartWidget /></NavLink>
 						</li>
 					</ul>
 				</div>

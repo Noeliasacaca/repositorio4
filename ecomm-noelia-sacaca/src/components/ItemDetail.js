@@ -16,11 +16,17 @@ const ItemDetail = ({item})=>{
                     <CgShutterstock/> <p>{item.description}</p>
                     <FiShoppingBag/> <strong>{item.stock}</strong>
                 </div>
-                <ItemCount 
-                cantidad = {item.cantidad}
-                stock="20" 
-                initial = "1"
-                onAdd={adding}/>
+                {
+                    Count === 0 ?
+                    <ItemCount 
+                        stock = {item.stock}
+                        initial = "0"
+                        onAdd = {Handler}
+                    />:
+                    <Link to='/cart'>
+                        <button type="button" className="btn py-0 " >Checkout</button>
+                    </Link>
+                }
             </div>
         </main>
     )
