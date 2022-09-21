@@ -1,4 +1,5 @@
-import {FiTag, CgShutterstock} from "react-icons/fi";
+import {FiTag} from "react-icons/fi";
+import {CgShutterstock} from "react-icons/cg";
 import {Link} from 'react-router-dom';
 
 const Item = ({title, price,img ,id})=>{

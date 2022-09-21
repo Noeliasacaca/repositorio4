@@ -1,4 +1,5 @@
-import {FiTag, CgShutterstock, FiShoppingBag} from "react-icons/fi";
+import {FiTag, FiShoppingBag} from "react-icons/fi";
+import {CgShutterstock} from "react-icons/cg";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item})=>{
