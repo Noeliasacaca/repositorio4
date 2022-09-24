@@ -2,19 +2,20 @@ import {FiTag} from "react-icons/fi";
 import {CgShutterstock} from "react-icons/cg";
 import {Link} from 'react-router-dom';
 
-const Item = ({title, price,img ,id})=>{
-    let link = `/detalle/${id}`
+const Item = ({title, price,img ,id, stock})=>{
     return (
         <div>
             <div>
                 <h3>{title}</h3>
             </div>
-            <a>
-                <img src={img}/>
-            </a>
-            <Link to={link}>
-            <CgShutterstock/> description
+            <Link>
+            <img src={img}/>
             </Link>
+            <p>En stock {stock}</p>               
+            <Link to={`/detail/${id}`}>
+                <buttom className='btn'><CgShutterstock/> Ver detalles </buttom>
+                </Link>
+            
                 <div>
                     <div>
                         <FiTag/> ${price} 

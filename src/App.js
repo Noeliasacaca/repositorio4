@@ -8,16 +8,17 @@ import { BrowserRouter,Routes,Route, } from "react-router-dom";
 function App() {
   return (
     <>
+
   <BrowserRouter>
+      <Navbar/>
           <Routes>
-            <Navbar/>
+            
               <Route  path='/'  element={<ItemListContainer greeting={"¡Contamos con productos de alta calidad!"}/>} />
               <Route path='/inicio' element={<ItemListContainer/>} />
               <Route  path='/detalle' element={<ItemDetailContainer greeting={"¡productos detalle!"}/>} />
               <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
-              <Route exact path='cart' element ={<Cart/>}/>
-            <Footer/>
         </Routes>
+      <Footer/>
   </BrowserRouter>
 </>
   );

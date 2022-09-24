@@ -22,7 +22,7 @@ const ItemCount = ({cantidad,inicial, onAdd})=>{
                 <Link onClick={()=>{agregando2()}}><FiPlus/></Link>
             </div>
             <div >
-                <button type="button" disabled={rate==0 && true}  onClick={()=>{onAdd(rate)}}>agregar al carrito</button>
+                <button type="button" disabled={rate===0 && true}  onClick={()=>{onAdd(rate)}}>agregar al carrito</button>
             </div>
         </div>
     );
