@@ -8,18 +8,20 @@ import { BrowserRouter,Routes,Route, } from "react-router-dom";
 function App() {
   return (
     <>
-
-  <BrowserRouter>
-      <Navbar/>
+    <div>
+      <header>
+        <BrowserRouter>
+          <Navbar/> 
           <Routes>
-            
-              <Route  path='/'  element={<ItemListContainer greeting={"¡Contamos con productos de alta calidad!"}/>} />
+              <Route  path='/'  element={<ItemListContainer/>} />
               <Route path='/inicio' element={<ItemListContainer/>} />
-              <Route  path='/detalle' element={<ItemDetailContainer greeting={"¡productos detalle!"}/>} />
-              <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
-        </Routes>
-      <Footer/>
-  </BrowserRouter>
+              <Route exact path='category/:id' element ={<ItemListContainer/>}/>
+              <Route exact path='detail/:id' element ={<ItemDetailContainer/>}/>
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </header>
+    </div>
 </>
   );
 }

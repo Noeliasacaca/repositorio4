@@ -2,6 +2,8 @@ import Item from '../containers/Item';
 
 const ItemList =( {items})=> {
     return(
+        <section>
+            {
                 items.map(item=>(
                     <Item 
                     key={item.id}
@@ -10,6 +12,9 @@ const ItemList =( {items})=> {
                     price={item.price}
                     img={item.img}/>
                 ))
+            }
+        </section>
     )
 }
+
 export default ItemList;

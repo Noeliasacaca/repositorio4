@@ -3,31 +3,29 @@ import Data from '../utils/Data';
 import ItemList from '../containers/ItemList'
 import { useParams } from 'react-router-dom';
 
-const adding = (rate)=>{
-    if(rate > 0 ){
-        alert(` ${rate} productos se agregaron a tu carrito `)
-    }
-}
-const ItemListContainer= ({greeting})=>{
+const ItemListContainer= ()=>{
     const [data,setData]=useState([]);
-        const {id} = useParams();
-        useEffect(()=>{ 
-            if(id){
-                Data()
-                    .then(result=> setData(result.filter(item=> item.category === id)))
-                    .catch(err=> console.log(err))
-            }else{ 
-                Data()
-                    .then(result=> setData(result))
-                    .catch(err=> console.log(err))
-            }
-        }, [id])
+    const {id} = useParams();
+    useEffect(()=>{ 
+        if(id){
+            Data()
+                .then(result=> setData(result.filter(item=> item.category == id)))
+                .catch(err=> console.log(err))
+        }else{ 
+            Data()
+                .then(result=> setData(result))
+                .catch(err=> console.log(err))
+        }
+    }, [id])
     return(
         <main>
-            <div><h2>{greeting}</h2></div>
+            <h2 className="text-center p-5">¡Contamos con productos de alta calidad!</h2>
             <ItemList 
-                items={data} />
+                items={data} 
+            />
+        
         </main>
     )
 }
-export default ItemListContainer;;
+
+export default ItemListContainer;

@@ -1,22 +1,18 @@
-import { useState ,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Data from '../utils/Data';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../components/ItemDetail';
 
-const ItemDetailContainer = ({greeting})=>{
+const ItemDetailContainer = ()=>{
     const [data,setData] = useState({});
     const {id} = useParams();
-    useEffect(()=>{
-        const getData = new Promise(resolve => {
-            setTime(() => {
-                resolve (Data)
-            },2000)
-        });
-        getData.then(res => setData(res.find(item => item.id == parseInt (id))))
-    }, [id])
+    useEffect(()=>{ 
+        Data()
+            .then(result=> setData(result.find(item=> item.id === parseInt(id))))
+            .catch(err=> console.log(err))
+    }, [id]);
     return(
-        <>
-        <h2>{greeting}</h2>
+        <><h6>detalles</h6>
             <ItemDetail 
                 item={data}
             /> 
@@ -24,3 +20,4 @@ const ItemDetailContainer = ({greeting})=>{
     );
 }
 export default ItemDetailContainer;
+

@@ -1,28 +1,27 @@
-import React from 'react'
+import { FiTag } from "react-icons/fi";
 import ItemCount from "./ItemCount";
 
-export const ItemDetail = ({ itemDetail }) => {
-    return (
+const carrito = (card)=>{
+    alert(`${card}productos estan en tu carrito`)
+}
+
+const ItemDetail = ({item})=>{
+    return(
         <main>
-            <div className="card col-12" key={itemDetail.id}>
-                <p>{itemDetail.title}</p>
-                <h5>${itemDetail.price}</h5>
-                <div>
-                    <img src={itemDetail.img}/>
-                    <p>{itemDetail.description}</p>
-                    <p>En stock {itemDetail.description}</p>
+            <div>
+                <img src={item.img}/>
+            </div>
+            <div>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                <div >
+                    <FiTag/>${item.price}
                 </div>
-                {
-                    Count === 0 ?
-                        <ItemCount
-                            stock={item.stock}
-                            initial="0"
-                            onAdd={Handler}
-                        /> :
-                        <Link to='/cart'>
-                            <button type="button" className="btn py-0 " >Checkout</button>
-                        </Link>
-                }
+                <ItemCount 
+                stock = {item.stock}
+                initial = "1"
+                onAdd = {carrito}
+                />
             </div>
         </main>
     )
