@@ -7,7 +7,8 @@ const data = [
         "price": 1000,
         "stock": 4,
         "img": "https://i.ibb.co/1RjMCbH/ceniceroformadecorazon.jpg",
-        category: "sahumerio"
+        category: "sahumerio",
+        quantity : 0
     },
     {
         "id": 2,
@@ -16,16 +17,18 @@ const data = [
         "price": 1000,
         "stock": 7,
         "img": "https://i.ibb.co/RgcFhHn/ceniceroformadehuevo.jpg",
-        category: "cenicero"
+        category: "cenicero",
+        quantity : 0
     },
     {
         "id": 3,
-        "author": "maceta con diseño de frutilla",
+        "title": "maceta con diseño de frutilla",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tenetur quia aliquid.",
         "price": 1000,
         "stock": 2,
         "img": "https://i.ibb.co/6410r2D/macetasformadefrutilla.jpg",
-        category: "maceta"
+        category: "maceta",
+        quantity : 0
     },
     {
         "id": 4,
@@ -34,7 +37,8 @@ const data = [
         "price": 1000,
         "stock": 8,
         "img": "https://i.ibb.co/H25pBdr/cenicerogatito.jpg",
-        category: "cenicero"
+        category: "cenicero",
+        quantity : 0
     },
     {
         "id": 5,
@@ -43,7 +47,8 @@ const data = [
         "price": 1000,
         "stock": 7,
         "img": "https://i.ibb.co/ng3Hyfh/ceniceroconfranjasrojas.jpg",
-        category: "cenicero"
+        category: "cenicero",
+        quantity : 0
     },
     {
         "id": 6,
@@ -52,7 +57,8 @@ const data = [
         "price": 1000,
         "stock": 3,
         "img": "https://i.ibb.co/7ttDRYF/saumerioformadehoja.jpg",
-        category: "sahumerio"
+        category: "sahumerio",
+        quantity : 0
     },
     {
         "id": 7,
@@ -61,7 +67,8 @@ const data = [
         "price": 1000,
         "stock": 2,
         "img": "https://i.ibb.co/BwTGndX/ceniceroyinyyang.jpg",
-        category: "cenicero"
+        category: "cenicero",
+        quantity : 0
     },
     {
         "id": 8,
@@ -70,7 +77,8 @@ const data = [
         "price": 1000,
         "stock": 1,
         "img": "https://i.ibb.co/r20WXHf/tetera-Frutilla.jpg",
-        category: "tetera"
+        category: "tetera",
+        quantity : 0
     },
     {
         "id": 9,
@@ -79,7 +87,8 @@ const data = [
         "price": 1000,
         "stock": 4,
         "img": "https://i.ibb.co/2y5tXy3/teteradegatito.jpg",
-        category: "tetera"
+        category: "tetera",
+        quantity : 0
     }
 ]
 
@@ -93,7 +102,7 @@ const Data=()=>{
             else{
                 reject()
             }
-        }, 2000)
+        }, 100)
     })
 }
 export default Data;
