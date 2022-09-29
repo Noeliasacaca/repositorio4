@@ -10,8 +10,8 @@ const ItemDetailContainer = ()=>{
     useEffect(() => {
         const getDato = async ()=>{
             const docSnap = await getDoc(doc(db, "products", id))
-            const product = {id:id,...docSnap.data()}
-            setItem(product)
+            const products = {id:id,...docSnap.data()}
+            setItem(products)
         }
         getDato()
 

@@ -1,12 +1,12 @@
 import { FiTag } from "react-icons/fi";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import ItemCount from "./ItemCount";
 
 
 
 const ItemDetail = ({ item }) => {
-    const [Count, setCount] = useState(0);
+    const [Count] = useState(0);
     const carrito = (card) => {
         alert(`${card}productos estan en tu carrito`)
     }
