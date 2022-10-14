@@ -20,9 +20,11 @@ Este ecommerce de cerámicas está construida con React JS usando  Firebase - Fi
 
 ### construido con
 
-React JS
-Javascript
-CSS
+-React JS
+
+-Javascript
+
+-CSS
 
 ### Para clonar el proyecto, siga estos pasos:
 Copia este enlace `https://github.com/Noeliasacaca/repositorio4.git`
