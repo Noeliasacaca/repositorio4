@@ -26,12 +26,23 @@ Este ecommerce de cerámicas está construida con React JS usando  Firebase - Fi
 
 -CSS
 
+### requisitos
+
+-NodeJS
+
+-NPM
+
 ### Para clonar el proyecto, siga estos pasos:
-Copia este enlace `https://github.com/Noeliasacaca/repositorio4.git`
-Abra la terminal en este directorio.
-Escribir clon `git clone https://github.com/Noeliasacaca/repositorio4.git`
-Luego ejecuta `cd repositorio4`
-Ejecute `npm install`
+
+-Copia este enlace `https://github.com/Noeliasacaca/repositorio4.git`
+
+-Abra la terminal en este directorio.
+
+-Escribir clon `git clone https://github.com/Noeliasacaca/repositorio4.git`
+
+-Luego ejecuta `cd repositorio4`
+
+-Ejecute `npm install`
 
 
 
