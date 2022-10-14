@@ -2,19 +2,20 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../components/ItemDetail';
 import { db } from "../utils/firebaseConfig";
-import { getDoc, doc } from "firebase/firestore";
+import { doc, getDoc ,query} from "firebase/firestore";
 
 const ItemDetailContainer = ()=>{
-    const [data,setItem] = useState({});
+    const [data,setData] = useState({});
     const {id} = useParams();
-    useEffect(() => {
-        const getDato = async ()=>{
-            const docSnap = await getDoc(doc(db, "products", id))
-            const products = {id:id,...docSnap.data()}
-            setItem(products)
-        }
-        getDato()
 
+    useEffect(()=>{ 
+        async function GetFBData(){
+            const productos = query(doc(db, "data",id))
+            const docSnap = await getDoc(productos);
+            setData({...docSnap.data(),id:id})
+        }
+        GetFBData()
+        
     }, [id]);
     return(
         <>

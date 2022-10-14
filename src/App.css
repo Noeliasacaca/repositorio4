@@ -6,7 +6,9 @@ body {
   background-color: #C0D7EA;
   font-family: "Secular One", sans-serif;
   font: 1em;
-  flex-wrap: wrap; }
+  flex-wrap: wrap; 
+  position: relative;
+}
 
 body {
   background-color: #C0D7EA; }
@@ -97,3 +99,139 @@ footer {
 h2{
   text-align: center;
 }
+
+
+h1{
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #332c2c;
+}
+
+
+
+
+
+/*cart*/
+.contenedorCart{
+  margin-top: 3rem;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fila{
+  background-color: #7894ad;
+  height: 45px;
+  color: rgb(0, 0, 0);
+}
+.fila th{
+  padding: 12px;    
+}
+.filaItem img{
+  padding-left: 2%;
+  max-width: 40px;
+}
+table{
+  width: 80%;
+}
+
+.tacho{
+  width: 45%;
+  border: #87B0D7;
+  background-color: #87B0D7;
+}
+
+.btnVolver{
+  position: absolute;
+  font-weight: 700;
+  left: 44%;
+}
+
+.btnVolver :hover{
+  color: #607f9c;
+}
+
+.resumen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px;
+  padding: 20px;
+  align-items: center;
+  background-color: #87B0D7;
+  border-radius: 5%;
+}
+
+.btnConfirm{
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.btnConfirm :hover{
+  color: #607f9c;
+}
+
+/*cartwidget*/
+.carrito{
+  display: flex;
+  margin-right: 2rem;
+  font-size: 1.7rem;
+  color:#87B0D7;
+}
+
+button{
+  background: #607f9c;
+}
+
+.carrito p{
+  position: relative;
+  left: 40px;
+  bottom: 12px;
+  width: 10px;
+  height: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*item*/
+.product{
+  text-align: center;
+}
+
+.img{
+  object-fit: contain;
+}
+.card{
+  background-color: #9bb3c7;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

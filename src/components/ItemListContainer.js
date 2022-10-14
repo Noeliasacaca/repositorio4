@@ -2,44 +2,39 @@ import { useEffect, useState } from 'react';
 import { db }  from '../utils/firebaseConfig';
 import ItemList from '../containers/ItemList'
 import { useParams } from 'react-router-dom';
-import { collection, getDocs, where, query} from "firebase/firestore";
+import { collection, getDocs ,query ,where} from "firebase/firestore";
 
-const ItemListContainer = () => {
-    const [data, setData] = useState([])
-    const { id } = useParams();
 
-    useEffect(() => {
-        const getData = async () => {
-            if (id){
-                const q =  query(collection(db, "products"), where("id", "==", id))
-            
-                const consulta = await getDocs(q)
-                const products = consulta.docs.map(item=>({
-                    id:item.id,...item.data()
-                })) 
-                setData(products)
+const ItemListContainer= ()=>{
+    const [data,setData] = useState([]);
+    const {id} = useParams();
+    const [] = useState("");
+    useEffect(()=>{ 
+        async function GetFBData(){
+            let products ;
+            if(id == undefined){
+                products = collection(db, "data")
+            }else{
+                products = query(collection(db, "data"),where('category',"==",id))
             }
-            else{
-                const consulta = await getDocs(collection(db, "products"))
-                const products = consulta.docs.map(item=>({
-                    id:item.id,...item.data()
-                })) 
-                setData(products)
-            }
+            const querySnapshot = await getDocs(products);
+            const FireBaseData=querySnapshot.docs.map( item =>( {
+                id: item.id,
+                ...item.data()
+            }))
+            setData(FireBaseData)
         }
-        getData()
+        GetFBData()
     }, [id])
-
-    console.log(data)
     return(
         <main>
             <h2 className="text-center p-5">¡Contamos con productos de alta calidad!</h2>
             <ItemList 
                 items={data} 
             />
-        
         </main>
     )
 }
 
 export default ItemListContainer;
+

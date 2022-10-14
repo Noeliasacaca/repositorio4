@@ -1,50 +1,29 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState } from 'react'
 
+const ItemCount = ({ stock, initial, onAdd }) => {
 
-const ItemCount = ({ initial, stock, item }) => {
-    const [cantidad, setCantidad, addItem] = useState(initial);
+    const [count, setCount] = useState(initial);
 
-
-
-    useEffect(() => {
-        setCantidad(initial);
-    }, [initial]);
-
-    const addProducto = (num) => {
-        setCantidad(cantidad + num);
-    };
-
-    const onAddHandle = () => {
-        addItem(item, cantidad);
-    };
-
+    const handleAdd = () => {
+        if (count < stock) {
+            setCount(count + 1);
+        }
+    }
+    const handleDecrement = () => {
+        if (count >= 1) {
+            setCount(count - 1)
+        }
+    }
+    const stockdispo = stock - count
     return (
         <div>
-            <div>
-                <button
-                    onClick={() => addProducto(-1)}
-                    disabled={cantidad === initial ? true : null}
-                >
-                    -
-                </button>
-                <span>{cantidad}</span>
-                <button
-                
-                    onClick={() => addProducto(+1)}
-                    disabled={cantidad === stock ? true : null}
-                >
-                    +
-                </button>
-            </div>
-            <button
-                onClick={() => onAddHandle()}
-                disabled={stock === 0 ? true : null}
-            >
-                Añadir al Carrido
-            </button>
+            <h2>{count}</h2>
+            <button variant="outline-dark" onClick={handleAdd}>+</button>
+            <button variant="outline-dark" onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button variant="outline-dark" onClick={handleDecrement}>-</button>
+            <h3>Stock Disponible {stockdispo}</h3>
         </div>
-    );
-};
+    )
+}
 
 export default ItemCount;
