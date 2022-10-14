@@ -2,69 +2,47 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Tienda KUMO
 
-In the project directory, you can run:
+Este ecommerce de cerámicas está construida con React JS usando  Firebase - Firestore Database. Proporciona a las personas que amen los productos artesanales, en donde nuestra tienda logrando tener productos con una impronta minimalista y con una estética propia.
 
-### `npm start`
+ Esta aplicación permite al usuario utilizar un carrito de compras para guardar los  productos que desee. Luego al terminar la compra le proporcionaremos una  orden de compra.
+ 
+## Un vistazo al ecommerce 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![react1](https://user-images.githubusercontent.com/107666926/195955100-d06850a8-3b74-4537-b9c7-c5a9005c78cd.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![react2](https://user-images.githubusercontent.com/107666926/195955112-cd192885-3e38-4b1e-9029-14ff678d5b79.png)
 
-### `npm test`
+![react](https://user-images.githubusercontent.com/107666926/195955123-00e74c9a-2c9a-497f-bf33-73d73b0aa852.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### construido con
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-React JS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Javascript
 
-### `npm run eject`
+-CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### requisitos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-NodeJS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-NPM
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Para clonar el proyecto, siga estos pasos:
 
-## Learn More
+-Copia este enlace `https://github.com/Noeliasacaca/repositorio4.git`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-Abra la terminal en este directorio.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-Escribir clon `git clone https://github.com/Noeliasacaca/repositorio4.git`
 
-### Code Splitting
+-Luego ejecuta `cd repositorio4`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-Ejecute `npm install`
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
