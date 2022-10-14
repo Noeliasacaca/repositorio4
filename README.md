@@ -2,11 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Tienda KUMO
 
-In the project directory, you can run:
+Este ecommerce de cerámicas está construida con React JS usando  Firebase - Firestore Database. Proporciona a las personas que amen los productos artesanales, en donde nuestra tienda logrando tener productos con una impronta minimalista y con una estética propia.
 
-### `npm start`
+ Esta aplicación permite al usuario utilizar un carrito de compras para guardar los  productos que desee. Luego al terminar la compra le proporcionaremos una  orden de compra.
+ 
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
